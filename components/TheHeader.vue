@@ -1,12 +1,12 @@
 <template>
   <header>
-      <h1>Hugo Tran</h1>
+      <h1>Hugo</h1>
       <nav>
           <ul>
               <li>Accueil</li>
+              <a href="#test"><li>À propos</li></a>
               <li>Technologies</li>
               <li>Projets</li>
-              <li>Contact</li>
           </ul>
       </nav>
   </header>
@@ -50,6 +50,10 @@ header{
             font-size: 1.5rem;
         }
     }
+}
+ul a{
+    color: white;
+    text-decoration: none;
 }
 .scrolled {
     animation: 0.5s scroll ease-in;

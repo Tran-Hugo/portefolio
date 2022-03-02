@@ -1,18 +1,27 @@
 <template>
   <div>
     <TheHeader />
-    <main>
-        <div class="Home">
+    <main id="main">
+        <section class="Home">
           <div class="intro">
             <p>Bonjour & Bienvenue</p>
             <div class="wrapper">
               <h1>Je suis </h1>
               <h1 class="typing"></h1>
             </div>
+            <div class="reseaux">
+              <a href="https://www.facebook.com/hugo.tran.790"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/hugo.tran.790/"><i class="fa-brands fa-instagram-square"></i></a>
+              <a href="https://www.linkedin.com/in/hugo-tran-202569233/"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="mailto:TranMSHugo@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <a href="/CV.pdf" class="btn btn-5"><span>Télécharger CV</span></a>
           </div>
           
-        </div>
-        <p class="test">test</p>
+        </section>
+        <section id="test">
+          test
+        </section>
     </main>
   </div>
 </template>
@@ -30,14 +39,21 @@ export default {
       typing: true,
     }
   },
-  beforeMount () {
-    window.addEventListener('scroll', this.bgColor);
-  },
   beforeDestroy() {
-    window.removeEventListener('scroll', this.bgColor);
+    document.getElementById("main").removeEventListener('scroll', this.bgColor);
   },
   mounted(){
+    document.getElementById("main").addEventListener('scroll', this.bgColor);
     this.type();
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
   },
   methods:{
     type(){
@@ -67,7 +83,8 @@ export default {
       }
     },
     bgColor(){
-            if(window.scrollY != 0){
+      console.log(document.getElementById("main").scrollTop)
+            if(document.getElementById("main").scrollTop != 0){
                 document.querySelector('header').classList.add('scrolled');
             } else {
               document.querySelector('header').classList.remove('scrolled');
@@ -79,6 +96,15 @@ export default {
 
 <style lang="scss">
 @import '~/assets/scss/_variables.scss';
+main{
+  scroll-snap-type: y mandatory;
+  overflow-y:scroll;
+  height: 100vh;
+}
+section{
+  height: 100vh;
+  scroll-snap-align: start;
+}
 .Home{
   height: 100vh;
   display: flex;
@@ -92,15 +118,28 @@ export default {
 .intro{
   position: relative;
   left: 38%;
-  p{
-    font-size: 1.5rem;
+    p{
+      font-size: 1.5rem;
+    }
+}
+.reseaux {
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  a{
+    color: white;
+    text-decoration: none;
+      i{
+        font-size: 2rem;
+      }
   }
 }
 .wrapper{
   display: flex;
-  h1{
-    font-size: 3rem;
-  }
+    h1{
+      font-size: 3rem;
+    }
 }
 .typing{
   position: relative;
@@ -128,6 +167,38 @@ export default {
 .test{
   height: 30vh;
 }
+.btn {
+  color: #fff;
+  cursor: pointer;
+  // display: block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 3rem;
+  margin: 0 0 2em;
+  max-width: 10rem; 
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%; 
+  margin: 2rem 0 0 0;
+    &:hover { text-decoration: none; }
+}
+.btn-5 {
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, .5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+} 
 
-
+.btn-5:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388; 
+  color: #fff;
+}
 </style>
