@@ -53,7 +53,7 @@ export default {
   display: flex;
   align-items: center;
   color: white;
-  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('~/assets/images/banner.jpg');
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('~/assets/images/banner.jpg');
   background-size: cover;
 }
 .wrapper{
