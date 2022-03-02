@@ -14,7 +14,12 @@
 
 <script>
 export default {
+    mounted(){
 
+    },
+    methods:{
+        
+    }
 }
 </script>
 
@@ -28,6 +33,7 @@ header{
     top: 0;
     left: 0;
     color: white;
+    animation: 0.5s unscroll ease-in;
     z-index: 10;
     h1{
         margin: 1rem 0 0 0;
@@ -43,6 +49,31 @@ header{
             list-style-type: none;
             font-size: 1.5rem;
         }
+    }
+}
+.scrolled {
+    animation: 0.5s scroll ease-in;
+    background-color: white;
+    color: black;
+}
+@keyframes scroll {
+    from {
+        background-color: unset;
+        color:white;
+    }
+    to {
+        background-color: white;
+        color: black;
+    }
+}
+@keyframes unscroll{
+    from {
+        background-color: white;
+        color: black;
+    }
+    to {
+        background-color: unset;
+        color:white;
     }
 }
 </style>
