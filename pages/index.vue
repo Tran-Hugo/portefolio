@@ -5,7 +5,7 @@
         <div class="Home">
           <div class="wrapper">
             <h1>Je suis </h1>
-            <h1 class="typing">hi</h1>
+            <h1 class="typing"></h1>
           </div>
         </div>
     </main>
@@ -17,11 +17,12 @@ export default {
   name: 'IndexPage',
   data(){
     return{
-      texts:["Hugo Tran","Développeur Web",],
+      texts:["Hugo Tran.","Développeur Web.",],
       count:0,
       index:0,
       currentText:'',
       letter:'',
+      typing: true,
     }
   },
   mounted(){
@@ -32,15 +33,27 @@ export default {
       if(this.count===this.texts.length){
         this.count = 0;
       }
-      this.currentText = this.texts[this.count];
-      this.letter = this.currentText.slice(0,++this.index)
-      document.querySelector('.typing').textContent = this.letter;
-      
-      if(this.letter.length === this.currentText.length){
-        this.count++;
-        this.index = 0;
+        this.currentText = this.texts[this.count];
+        
+      if(this.typing === true){
+        this.letter = this.currentText.slice(0,++this.index)
+        document.querySelector('.typing').textContent = this.letter;
+        if(this.letter.length === this.currentText.length){
+          this.typing = false;
+        }
+      } else {
+        this.letter = this.currentText.slice(0,--this.index)
+        document.querySelector('.typing').textContent = this.letter;
+        if(this.letter.length === 0){
+          this.typing = true;
+          this.count++;
+        }
       }
-      setTimeout(this.type, 300);
+      if (this.typing === true){
+        setTimeout(this.type, 300);
+      } else {
+        setTimeout(this.type, 50);
+      }
     }
   }
 }
