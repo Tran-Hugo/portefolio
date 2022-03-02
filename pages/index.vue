@@ -4,7 +4,7 @@
     <main>
         <div class="Home">
           <div class="intro">
-            <p>Bonjour & Bienvenu</p>
+            <p>Bonjour & Bienvenue</p>
             <div class="wrapper">
               <h1>Je suis </h1>
               <h1 class="typing"></h1>
@@ -12,7 +12,7 @@
           </div>
           
         </div>
-        <p>test</p>
+        <p class="test">test</p>
     </main>
   </div>
 </template>
@@ -86,6 +86,8 @@ export default {
   color: white;
   background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('~/assets/images/banner.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .intro{
   position: relative;
@@ -123,7 +125,9 @@ export default {
     opacity: 1;
   }
 }
-
+.test{
+  height: 30vh;
+}
 
 
 </style>
