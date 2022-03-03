@@ -231,7 +231,7 @@ section{
     top: 20rem;
   }
   50%{
-    top: 19rem;
+    top: 19.5rem;
   }
   to{
     top: 20rem;
