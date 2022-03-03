@@ -16,7 +16,7 @@
               <a href="mailto:TranMSHugo@gmail.com"><i class="fa-solid fa-envelope"></i></a>
             </div>
             <a href="/CV.pdf" class="btn btn-5"><span>Télécharger CV</span></a>
-            <a href="#about"><button class="bottom_arrow">˅</button></a>
+            <a href="#about" class="bottom_arrow_a"><button class="bottom_arrow">˅</button></a>
           </div>
           
         </section>
@@ -220,10 +220,12 @@ section{
     border: 1px solid rgba(255,255,255,0.5);
     border-radius: 1.5rem;
     color: white;
-    position: relative;
-    top: 20rem;
-    left: 3.5rem;
-    animation: bounce 1s ease infinite;
+    &_a{
+      position: relative;
+      top: 20rem;
+      left: 3.5rem;
+      animation: bounce 1s ease infinite;
+    }
 }
 
 @keyframes bounce {
