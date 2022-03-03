@@ -42,6 +42,9 @@
           <h3>Front-end · Back-end</h3>
           <p class="présentation">Au cours de cette formation, j'ai fais mes premiers pas en tant que développeur web et j'ai eu l'occasion d'étudier diverses technologies notamment des Frameworks Front-end et Back-end</p>
         </section>
+        <section>
+          test
+        </section>
     </main>
   </div>
 </template>
@@ -122,6 +125,7 @@ export default {
 }
 main{
   scroll-snap-type: y mandatory;
+  scroll-padding-top:8vh ;
   overflow-y:scroll;
   height: 100vh;
 }
