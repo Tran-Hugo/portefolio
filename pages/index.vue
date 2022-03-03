@@ -21,12 +21,26 @@
           
         </section>
         <section id="about">
-          <h1>À propos de moi </h1>
+          <h1 class="haut_de_page">À propos de moi </h1>
           <div class="asterisque_container">
             <div class="barre"></div>
             <h2>*</h2>
             <div class="barre"></div>
           </div>
+          <p class="présentation">Je sors tout juste de la formation de
+            développeur web et web mobile au centre
+            de formation de l'Afpa à Créteil et je
+            recherche activement un poste en
+            alternance.
+          </p>
+          <div class="asterisque_container">
+            <div class="barre"></div>
+            <h2>*</h2>
+            <div class="barre"></div>
+          </div>
+          <h1>Développeur</h1>
+          <h3>Front-end · Back-end</h3>
+          <p class="présentation">Au cours de cette formation, j'ai fais mes premiers pas en tant que développeur web et j'ai eu l'occasion d'étudier diverses technologies notamment des Frameworks Front-end et Back-end</p>
         </section>
     </main>
   </div>
@@ -89,7 +103,7 @@ export default {
       }
     },
     bgColor(){
-      console.log(document.getElementById("main").scrollTop)
+      // console.log(document.getElementById("main").scrollTop)
             if(document.getElementById("main").scrollTop != 0){
                 document.querySelector('header').classList.add('scrolled');
             } else {
@@ -246,7 +260,7 @@ section{
   flex-direction: column;
   align-items: center;
 }
-#about h1{
+.haut_de_page{
   padding-top: 2rem;
 }
 .asterisque_container{
@@ -263,6 +277,10 @@ section{
   border: 1px solid rgba(194, 194, 194,0.73);
   width: 2rem;
 }
-
+.présentation{
+  width: 33rem;
+  text-align: center;
+  color: grey;
+}
 /*#endregion */
 </style>
