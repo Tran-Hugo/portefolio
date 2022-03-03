@@ -3,8 +3,8 @@
       <h1>Hugo</h1>
       <nav>
           <ul>
-              <li>Accueil</li>
-              <a href="#test"><li>À propos</li></a>
+              <a href="#Home"><li>Accueil</li></a>
+              <a href="#about"><li>À propos</li></a>
               <li>Technologies</li>
               <li>Projets</li>
           </ul>
@@ -28,7 +28,7 @@ header{
     display: flex;
     justify-content: space-evenly;
     width:100%;
-    max-height: 5rem;
+    max-height: 8vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -52,13 +52,18 @@ header{
     }
 }
 ul a{
-    color: white;
+    color: unset;
     text-decoration: none;
+    &:hover{
+        color: unset;
+    }
 }
 .scrolled {
     animation: 0.5s scroll ease-in;
     background-color: white;
-    color: black;
+    color: black;  
+    box-shadow: 2px 3px 8px -2px rgba(0,0,0,0.23);
+
 }
 @keyframes scroll {
     from {

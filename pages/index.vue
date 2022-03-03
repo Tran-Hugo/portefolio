@@ -2,7 +2,7 @@
   <div>
     <TheHeader />
     <main id="main">
-        <section class="Home">
+        <section class="Home" id="Home">
           <div class="intro">
             <p>Bonjour & Bienvenue</p>
             <div class="wrapper">
@@ -10,17 +10,23 @@
               <h1 class="typing"></h1>
             </div>
             <div class="reseaux">
-              <a href="https://www.facebook.com/hugo.tran.790"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://github.com/Tran-Hugo"><i class="fa-brands fa-github"></i></a>
               <a href="https://www.instagram.com/hugo.tran.790/"><i class="fa-brands fa-instagram-square"></i></a>
               <a href="https://www.linkedin.com/in/hugo-tran-202569233/"><i class="fa-brands fa-linkedin"></i></a>
               <a href="mailto:TranMSHugo@gmail.com"><i class="fa-solid fa-envelope"></i></a>
             </div>
             <a href="/CV.pdf" class="btn btn-5"><span>Télécharger CV</span></a>
+            <a href="#about"><button class="bottom_arrow">˅</button></a>
           </div>
           
         </section>
-        <section id="test">
-          test
+        <section id="about">
+          <h1>À propos de moi </h1>
+          <div class="asterisque_container">
+            <div class="barre"></div>
+            <h2>*</h2>
+            <div class="barre"></div>
+          </div>
         </section>
     </main>
   </div>
@@ -96,15 +102,20 @@ export default {
 
 <style lang="scss">
 @import '~/assets/scss/_variables.scss';
+*{
+  margin: 0;
+  padding: 0;
+}
 main{
   scroll-snap-type: y mandatory;
   overflow-y:scroll;
   height: 100vh;
 }
 section{
-  height: 100vh;
+  height: 92vh;
   scroll-snap-align: start;
 }
+/* #region Home */
 .Home{
   height: 100vh;
   display: flex;
@@ -179,6 +190,7 @@ section{
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 2.25rem;
   width: 100%; 
   margin: 2rem 0 0 0;
     &:hover { text-decoration: none; }
@@ -201,4 +213,54 @@ section{
   text-shadow: 1px 1px 2px #427388; 
   color: #fff;
 }
+.bottom_arrow{
+    background-color: unset;
+    width: 2rem;
+    height: 4rem;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 1.5rem;
+    color: white;
+    position: relative;
+    top: 20rem;
+    left: 3.5rem;
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+  from{
+    top: 20rem;
+  }
+  50%{
+    top: 19rem;
+  }
+  to{
+    top: 20rem;
+  }
+}
+/* #endregion */
+/* #region about */
+#about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#about h1{
+  padding-top: 2rem;
+}
+.asterisque_container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 6rem;
+    h2{
+      font-size: 3rem;
+      margin-top: 1rem;
+    }
+}
+.barre{
+  border: 1px solid rgba(194, 194, 194,0.73);
+  width: 2rem;
+}
+
+/*#endregion */
 </style>
