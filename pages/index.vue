@@ -40,7 +40,7 @@
           </div>
           <h1>Développeur</h1>
           <h3>Front-end · Back-end</h3>
-          <p class="présentation">Au cours de cette formation, j'ai fais mes premiers pas en tant que développeur web et j'ai eu l'occasion d'étudier diverses technologies notamment des Frameworks Front-end et Back-end</p>
+          <p class="présentation2">Au cours de cette formation, j'ai fais mes premiers pas en tant que développeur web et j'ai eu l'occasion d'étudier diverses technologies notamment des Frameworks Front-end et Back-end</p>
         </section>
         <section>
           test
@@ -285,6 +285,10 @@ section{
   width: 33rem;
   text-align: center;
   color: grey;
+  &2{
+    @extend .présentation;
+    width: 60rem;
+  }
 }
 /*#endregion */
 </style>
