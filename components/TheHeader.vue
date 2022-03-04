@@ -5,7 +5,7 @@
           <ul>
               <a href="#Home"><li>Accueil</li></a>
               <a href="#about"><li>À propos</li></a>
-              <li>Technologies</li>
+              <a href="#technologies"><li>Technologies</li></a>
               <li>Projets</li>
           </ul>
       </nav>

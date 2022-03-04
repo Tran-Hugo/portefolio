@@ -40,10 +40,60 @@
           </div>
           <h1>Développeur</h1>
           <h3>Front-end · Back-end</h3>
-          <p class="présentation2">Au cours de cette formation, j'ai fais mes premiers pas en tant que développeur web et j'ai eu l'occasion d'étudier diverses technologies notamment des Frameworks Front-end et Back-end</p>
+          <p class="présentation2">Au cours de cette formation, j'ai fais mes premiers pas en tant que développeur web et j'ai eu l'occasion d'étudier diverses technologies notamment des Frameworks Front-end et Back-end. Je souhaite évoluer en tant que développeur et monter en compétence.</p>
+          <div class="asterisque_container">
+            <div class="barre"></div>
+            <h2>*</h2>
+            <div class="barre"></div>
+          </div>
+          <img class="photo" src="@/assets/images/photo.jpg" alt="photo de profil">
         </section>
-        <section>
-          test
+        <section id="technologies">
+          <h1 class="haut_de_page text-center">Technologies</h1>
+          <div class="asterisque_container">
+            <div class="barre"></div>
+            <h2>*</h2>
+            <div class="barre"></div>
+          </div>
+            <div class="tech_container">
+              <div class="tech_container_1">
+                <div class="show1 show">
+                  <p>Html 5 & CSS 3</p>
+                  <img src="@/assets/images/html-css.png" alt="html.png">
+                </div>
+                <div class="show3 show">
+                  <p>JavaScript</p>
+                  <img src="@/assets/images/javascript.png" alt="javascript.png">
+                </div>
+                <div class="show5 show">
+                  <p>Vue.js</p>
+                  <img src="@/assets/images/vue.png" alt="vue.png">
+                </div>
+                <div class="show7 show">
+                  <p>Nuxt.js</p>
+                  <img src="@/assets/images/nuxt.svg" alt="nuxt.svg">
+                </div>
+              </div>
+              <img class="img_responsive" src="@/assets/images/responsive.png" alt="responsive.png">
+              <div class="tech_container_2">
+                <div class="show2 show">
+                  <img src="@/assets/images/php8.png" alt="php8.png">
+                  <p>Php 8</p>
+                </div>
+                <div class="show4 show">
+                  <img src="@/assets/images/symfony.png" alt="symfony.png">
+                  <p>Symfony 5</p>
+                </div>
+                <div class="show6 show">
+                  <img src="@/assets/images/api-platform.png" alt="api-platform.png">
+                  <p>Api Platform</p>
+                </div>
+                <div class="show8 show">
+                  <img src="@/assets/images/mysql.png" alt="mysql.png">
+                  <p>MySQL</p>
+                </div>
+              </div>
+            </div>
         </section>
     </main>
   </div>
@@ -63,11 +113,12 @@ export default {
     }
   },
   beforeDestroy() {
-    document.getElementById("main").removeEventListener('scroll', this.bgColor);
+    document.getElementById("main").removeEventListener('scroll', this.scrolling);
   },
   mounted(){
-    document.getElementById("main").addEventListener('scroll', this.bgColor);
+    document.getElementById("main").addEventListener('scroll', this.scrolling);
     this.type();
+    this.observe();
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -105,13 +156,35 @@ export default {
         setTimeout(this.type, 50);
       }
     },
-    bgColor(){
+    scrolling(){
       // console.log(document.getElementById("main").scrollTop)
             if(document.getElementById("main").scrollTop != 0){
                 document.querySelector('header').classList.add('scrolled');
             } else {
               document.querySelector('header').classList.remove('scrolled');
             }
+    },
+    observe(){
+      const ratio = .7;
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: ratio
+      }
+
+      const handleInteserct = function(entries, observer){
+        entries.forEach(function(entry){
+          if(entry.intersectionRatio > ratio){
+            entry.target.classList.add('showing')
+            observer.unobserve(entry.target);
+          }
+        })
+      }
+
+      var observer = new IntersectionObserver(handleInteserct, options);
+      document.querySelectorAll('.show').forEach(function(r){
+        observer.observe(r)
+      })
     },
   }
 }
@@ -289,6 +362,108 @@ section{
     @extend .présentation;
     width: 60rem;
   }
+}
+.photo{
+  height: 11rem;
+  width:11rem;
+  border: 1px solid;
+  border-radius: 6rem;
+  margin-top: 3rem;
+}
+/*#endregion */
+/*#region technologies*/
+#technologies{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8080800a;
+}
+.tech_container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 70%;
+  &_1{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    .show{
+      justify-content: flex-end;
+    }
+  }
+  &_2{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    .show{
+      justify-content: flex-start;
+    }
+  }
+}
+.show{
+  display: flex;
+  align-items: center;
+  height: 8.3rem;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(+30px);
+  &ing{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 2s;
+  }
+  &1{
+    transition-delay: .2s;
+    position: relative;
+    left: 13rem;
+  }
+  &2{
+    transition-delay: .4s;
+    position: relative;
+    right: 13rem;
+  }
+  &3{
+    transition-delay: .6s;
+  }
+  &4{
+    transition-delay: .8s;
+  }
+  &5{
+    transition-delay: 1s;
+  }
+  &6{
+    transition-delay: 1.2s;
+  }
+  &7{
+    transition-delay: 1.4s;
+    position: relative;
+    left: 13rem;
+  }
+  &8{
+    transition-delay: 1.6s;
+    position: relative;
+    right: 13rem;
+  }
+  p{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  img{
+    height: 6.9rem;
+    width: 7.3rem;
+    margin-inline: 1rem;
+  }
+}
+
+
+.img_responsive{
+  height: 20rem;
+  width: 20rem;
 }
 /*#endregion */
 </style>
