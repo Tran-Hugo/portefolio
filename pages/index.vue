@@ -2,9 +2,9 @@
   <div>
     <TheHeader />
     <main id="main">
-        <section class="Home" id="Home">
+        <section class="Home" id="home">
           <div class="intro">
-            <p>Bonjour & Bienvenue</p>
+            <p class="show home_mark">Bonjour & Bienvenue</p>
             <div class="wrapper">
               <h1>Je suis </h1>
               <h1 class="typing"></h1>
@@ -21,7 +21,7 @@
           
         </section>
         <section id="about">
-          <h1 class="haut_de_page">À propos de moi </h1>
+          <h1 class="haut_de_page show test">À propos de moi </h1>
           <div class="asterisque_container">
             <div class="barre"></div>
             <h2>*</h2>
@@ -57,38 +57,38 @@
           </div>
             <div class="tech_container">
               <div class="tech_container_1">
-                <div class="show1 show">
+                <div class="show-1 show- show">
                   <p>Html 5 & CSS 3</p>
                   <img src="@/assets/images/html-css.png" alt="html.png">
                 </div>
-                <div class="show3 show">
+                <div class="show-3 show- show">
                   <p>JavaScript</p>
                   <img src="@/assets/images/javascript.png" alt="javascript.png">
                 </div>
-                <div class="show5 show">
+                <div class="show-5 show- show">
                   <p>Vue.js</p>
                   <img src="@/assets/images/vue.png" alt="vue.png">
                 </div>
-                <div class="show7 show">
+                <div class="show-7 show- show">
                   <p>Nuxt.js</p>
                   <img src="@/assets/images/nuxt.svg" alt="nuxt.svg">
                 </div>
               </div>
               <img class="img_responsive" src="@/assets/images/responsive.png" alt="responsive.png">
               <div class="tech_container_2">
-                <div class="show2 show">
-                  <img src="@/assets/images/php8.png" alt="php8.png">
+                <div class="show-2 show- show">
+                  <img src="@/assets/images/php-logo.svg" alt="php8.png">
                   <p>Php 8</p>
                 </div>
-                <div class="show4 show">
+                <div class="show-4 show- show">
                   <img src="@/assets/images/symfony.png" alt="symfony.png">
                   <p>Symfony 5</p>
                 </div>
-                <div class="show6 show">
+                <div class="show-6 show- show">
                   <img src="@/assets/images/api-platform.png" alt="api-platform.png">
                   <p>Api Platform</p>
                 </div>
-                <div class="show8 show">
+                <div class="show-8 show- show">
                   <img src="@/assets/images/mysql.png" alt="mysql.png">
                   <p>MySQL</p>
                 </div>
@@ -119,15 +119,7 @@ export default {
     document.getElementById("main").addEventListener('scroll', this.scrolling);
     this.type();
     this.observe();
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+    this.smooth();
   },
   methods:{
     type(){
@@ -157,12 +149,39 @@ export default {
       }
     },
     scrolling(){
-      // console.log(document.getElementById("main").scrollTop)
             if(document.getElementById("main").scrollTop != 0){
                 document.querySelector('header').classList.add('scrolled');
             } else {
               document.querySelector('header').classList.remove('scrolled');
             }
+
+            const navLi = document.querySelectorAll('.links');
+            const sec = document.querySelectorAll('section');
+            let current = "";
+            sec.forEach(section=>{
+              const sectionTop = section.offsetTop;
+              const sectionHeight = section.clientHeight;
+              if(document.getElementById("main").scrollTop>sectionTop-100){
+                current = section.getAttribute('id');
+              }
+              navLi.forEach(li => {
+                li.classList.remove('active');
+                if(li.classList.contains("li_"+current)){
+                  li.classList.add('active')
+                }
+              })
+            })
+    },
+    smooth(){
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+      });
+    });
     },
     observe(){
       const ratio = .7;
@@ -174,8 +193,9 @@ export default {
 
       const handleInteserct = function(entries, observer){
         entries.forEach(function(entry){
+          // if(entry.intersectionRatio > ratio && Array.from(entry.target.classList).includes('home_mark')){
           if(entry.intersectionRatio > ratio){
-            entry.target.classList.add('showing')
+            entry.target.classList.add('show-ing')
             observer.unobserve(entry.target);
           }
         })
@@ -364,11 +384,13 @@ section{
   }
 }
 .photo{
-  height: 11rem;
-  width:11rem;
+  height: 14rem;
+  width:14rem;
   border: 1px solid;
-  border-radius: 6rem;
+  border-radius: 7rem;
   margin-top: 3rem;
+  object-fit: cover;
+  object-position: top;
 }
 /*#endregion */
 /*#region technologies*/
@@ -390,7 +412,7 @@ section{
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
-    .show{
+    .show-{
       justify-content: flex-end;
     }
   }
@@ -400,12 +422,12 @@ section{
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
-    .show{
+    .show-{
       justify-content: flex-start;
     }
   }
 }
-.show{
+.show-{
   display: flex;
   align-items: center;
   height: 8.3rem;

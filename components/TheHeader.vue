@@ -3,9 +3,9 @@
       <h1>Hugo</h1>
       <nav>
           <ul>
-              <a href="#Home"><li>Accueil</li></a>
-              <a href="#about"><li>À propos</li></a>
-              <a href="#technologies"><li>Technologies</li></a>
+              <a href="#home"><li class="links li_home active">Accueil</li></a>
+              <a href="#about"><li class="links li_about">À propos</li></a>
+              <a href="#technologies"><li class="links li_technologies">Technologies</li></a>
               <li>Projets</li>
           </ul>
       </nav>
@@ -84,5 +84,9 @@ ul a{
         background-color: unset;
         color:white;
     }
+}
+.active{
+    font-weight: bold;
+    transition: all 150ms ease-in-out
 }
 </style>
