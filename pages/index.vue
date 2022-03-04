@@ -27,7 +27,7 @@
             <h2>*</h2>
             <div class="barre"></div>
           </div>
-          <p class="présentation">Je sors tout juste de la formation de
+          <p class="présentation">Basé en région parisienne, je sors tout juste de la formation de
             développeur web et web mobile au centre
             de formation de l'Afpa à Créteil et je
             recherche activement un poste en
