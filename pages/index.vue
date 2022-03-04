@@ -164,13 +164,13 @@ export default {
               if(document.getElementById("main").scrollTop>sectionTop-100){
                 current = section.getAttribute('id');
               }
+            })
               navLi.forEach(li => {
                 li.classList.remove('active');
                 if(li.classList.contains("li_"+current)){
                   li.classList.add('active')
                 }
               })
-            })
     },
     smooth(){
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
