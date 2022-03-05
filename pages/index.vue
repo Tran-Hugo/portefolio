@@ -156,7 +156,6 @@ export default {
             let current = "";
             sec.forEach(section=>{
               const sectionTop = section.offsetTop;
-              const sectionHeight = section.clientHeight;
               if(document.getElementById("main").scrollTop>sectionTop-100){
                 current = section.getAttribute('id');
               }
