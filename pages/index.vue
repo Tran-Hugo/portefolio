@@ -1,7 +1,7 @@
 <template>
   <div>
     <TheHeader />
-    <main id="main">
+    <main id="main" @scroll="scrolling()">
         <section class="Home" id="home">
           <div class="intro">
             <p class="show home_mark">Bonjour & Bienvenue</p>
@@ -112,11 +112,7 @@ export default {
       typing: true,
     }
   },
-  beforeDestroy() {
-    document.getElementById("main").removeEventListener('scroll', this.scrolling);
-  },
   mounted(){
-    document.getElementById("main").addEventListener('scroll', this.scrolling);
     this.type();
     this.observe();
     this.smooth();
