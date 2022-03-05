@@ -95,6 +95,9 @@
               </div>
             </div>
         </section>
+        <section id="projets">
+          projets
+        </section>
     </main>
   </div>
 </template>

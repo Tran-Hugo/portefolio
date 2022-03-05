@@ -6,7 +6,7 @@
               <a href="#home"><li class="links li_home active">Accueil</li></a>
               <a href="#about"><li class="links li_about">À propos</li></a>
               <a href="#technologies"><li class="links li_technologies">Technologies</li></a>
-              <li>Projets</li>
+              <a href="#projets"><li class="links li_projets">Projets</li></a>
           </ul>
       </nav>
   </header>
