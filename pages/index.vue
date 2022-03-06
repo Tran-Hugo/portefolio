@@ -101,14 +101,30 @@
               <p>Site e-commerce pour une librairie fictive "La Notule"</p>
             </div>
           </div>
-          <h2 class="text-center">La Notule</h2>
-          <div class="la_notule_tech">
-            <h3>Technologies :</h3>
-            <ul>
-              <li>Vue.js 3</li>
-              <li>Symfony 5</li>
-              <li>Api Platform</li>
-            </ul>
+          <a href="https://la-notule.fr/" class="la_notule_link" title="Se rendre sur le site"><img src="@/assets/images/logo_la_notule.svg" alt="logo_la_notule.svg"></a>
+          <div class="la_notule_container">
+            <div class="la_notule_tech">
+              <h3>Technologies :</h3>
+              <ul>
+                <li>Vue.js 3</li>
+                <li>Symfony 5</li>
+                <li>Api Platform</li>
+                <li>Authentification JWT</li>
+                <li>Stripe</li>
+                <li>Bootstrap 5</li>
+              </ul>
+            </div>
+            <h3 class="la_notule_titles">Front-end</h3>
+            <p class="la_notule_txt">
+              La partie Front-end du site a été réalisée avec Vue.js. C'est une Single Page Application, faite avec Vue Router, qui communique avec la partie Back-end via des requêtes HTTP
+              avec l'aide d'Axios. Les données sont gérées avec VueX.
+            </p>
+            <h3 class="la_notule_titles">Back-end</h3>
+            <p class="la_notule_txt">
+              La partie Back-end du site a été réalisée avec Symfony et API platform. L'authentification se fait avec les Json Web Token. Les stocks de livre, les paniers des clients ainsi que leurs montants sont gérés par le Back-end.
+              Les paiements en ligne sont réalisés avec Stripe Api.
+            </p>
+            <p class="text-center"><a href="https://la-notule.fr/">https://la-notule.fr/</a></p>
           </div>
         </section>
     </main>
@@ -513,6 +529,15 @@ section{
   background-position-y: 8vh;
   display: flex;
   align-items: flex-end;
+  &_link{
+    color: black;
+    text-decoration: none;
+    &:hover{
+      position: relative;
+      bottom: .2rem;
+      transition: 1s;
+    }
+  }
   &_band{
     background-color: rgba(128, 128, 128,  70%);
     width: 100%;
@@ -522,10 +547,15 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    
+  }
+  &_container{
+    width: 80%;
   }
   &_tech{
     display: flex;
     width: 90%;
+    margin-top: 1rem;
     ul {
       list-style-type: none;
       display: flex;
@@ -533,7 +563,7 @@ section{
       justify-content: space-around;
       padding: 0;
       margin: 0;
-      width: 20vw;
+      width: 60%;
       li{
         border: 1px solid;
         border-radius: 3rem;
@@ -542,9 +572,19 @@ section{
           color: white;
           background-color: grey;
           transition: 500ms;
+          cursor: pointer;
         }
       }
     }
+  }
+  &_titles{
+    margin-top: 1rem;
+  }
+  &_txt{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #686868;
+    text-align: justify;
   }
 }
 
