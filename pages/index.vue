@@ -532,11 +532,6 @@ section{
   &_link{
     color: black;
     text-decoration: none;
-    &:hover{
-      position: relative;
-      bottom: .2rem;
-      transition: 1s;
-    }
   }
   &_band{
     background-color: rgba(128, 128, 128,  70%);
