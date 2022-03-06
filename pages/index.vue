@@ -7,7 +7,7 @@
             <p class="show home_mark">Bonjour & Bienvenue</p>
             <div class="wrapper">
               <h1>Je suis </h1>
-              <h1 class="typing"></h1>
+              <h1 class="typing"><strong></strong></h1>
             </div>
             <div class="reseaux">
               <a href="https://github.com/Tran-Hugo"><i class="fa-brands fa-github"></i></a>
@@ -21,7 +21,7 @@
           
         </section>
         <section id="about">
-          <h1 class="haut_de_page show test">À propos de moi </h1>
+          <h2 class="haut_de_page">À propos de moi </h2>
           <div class="asterisque_container">
             <div class="barre"></div>
             <h2>*</h2>
@@ -49,7 +49,7 @@
           <img class="photo" src="@/assets/images/photo.jpg" alt="photo de profil">
         </section>
         <section id="technologies">
-          <h1 class="haut_de_page text-center">Technologies</h1>
+          <h2 class="haut_de_page text-center">Technologies</h2>
           <div class="asterisque_container">
             <div class="barre"></div>
             <h2>*</h2>
@@ -96,7 +96,20 @@
             </div>
         </section>
         <section id="projets">
-          projets
+          <div class="la_notule">
+            <div class="la_notule_band">
+              <p>Site e-commerce pour une librairie fictive "La Notule"</p>
+            </div>
+          </div>
+          <h2 class="text-center">La Notule</h2>
+          <div class="la_notule_tech">
+            <h3>Technologies :</h3>
+            <ul>
+              <li>Vue.js 3</li>
+              <li>Symfony 5</li>
+              <li>Api Platform</li>
+            </ul>
+          </div>
         </section>
     </main>
   </div>
@@ -284,9 +297,6 @@ section{
     opacity: 1;
   }
 }
-.test{
-  height: 30vh;
-}
 .btn {
   color: #fff;
   cursor: pointer;
@@ -357,6 +367,7 @@ section{
 }
 .haut_de_page{
   padding-top: 2rem;
+  font-size: 3rem;
 }
 .asterisque_container{
   display: flex;
@@ -485,5 +496,57 @@ section{
   height: 20rem;
   width: 20rem;
 }
+/*#endregion */
+/*#region Projets*/
+#projets{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.la_notule{
+  width: 100%;
+  height: 40vh;
+  background-image:url("@/assets/images/la_notule.png") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-y: 8vh;
+  display: flex;
+  align-items: flex-end;
+  &_band{
+    background-color: rgba(128, 128, 128,  70%);
+    width: 100%;
+    height: 7vh;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_tech{
+    display: flex;
+    width: 90%;
+    ul {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0;
+      margin: 0;
+      width: 20vw;
+      li{
+        border: 1px solid;
+        border-radius: 3rem;
+        padding: .3rem 1.1rem;
+        &:hover{
+          color: white;
+          background-color: grey;
+          transition: 500ms;
+        }
+      }
+    }
+  }
+}
+
 /*#endregion */
 </style>
