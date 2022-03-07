@@ -108,6 +108,9 @@ ul a{
     max-height: unset;
     background-color: #5555554f;
     min-height: 8vh;
+    h1{
+        margin:1rem 0 0 1rem;
+    }
   }
   nav{
     width: unset !important;
