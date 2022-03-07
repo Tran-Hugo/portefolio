@@ -238,7 +238,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~/assets/scss/_variables.scss';
+@import '~/assets/scss/_responsive.scss';
 *{
   margin: 0;
   padding: 0;
@@ -382,7 +382,7 @@ section{
   align-items: center;
 }
 .haut_de_page{
-  padding-top: 2rem;
+  padding-top: 1rem;
   font-size: 3rem;
 }
 .asterisque_container{
@@ -416,6 +416,9 @@ section{
   margin-top: 3rem;
   object-fit: cover;
   object-position: top;
+  @media screen and (max-height: 940px){
+    margin-top: 0;
+  }
 }
 /*#endregion */
 /*#region technologies*/
@@ -559,13 +562,18 @@ section{
       padding: 0;
       margin: 0;
       width: 60%;
+      @media screen and (max-width:1640px) {
+        width: 70%;
+      }
       li{
         border: 1px solid;
         border-radius: 3rem;
         padding: .3rem 1.1rem;
+        color: black;
+        background-color: white;
         &:hover{
-          color: white;
-          background-color: grey;
+          color: white;    
+          background-color: black;
           transition: 500ms;
           cursor: pointer;
         }
@@ -583,5 +591,82 @@ section{
   }
 }
 
+/*#endregion */
+/*#region media queries */
+@media screen and (min-width: 1440px) {
+  .tech_container{
+    width: 90%;
+    &_1{
+      width: 33%;
+    }
+    &_2{
+      width: 33%;
+    }
+  }
+}
+@media #{$large-up}{
+  /*#region Home large-up*/
+    .intro{
+        left: 35%;
+    }
+  /*#endregion */
+  /*#region about large-up*/
+    .haut_de_page{
+      padding-top: 1rem;
+    }
+    .photo{
+      margin-top: 0;
+    }
+  /*#endregion */
+  /*#region technologies large-up*/
+    .tech_container{
+      width: 100%;
+      &_1{
+        width: 33%;
+      }
+      &_2{
+        width: 33%;
+      }
+    }
+  /*#endregion */
+  /*#region Projets large-up*/
+    .la_notule{
+      &_container{
+        width: 90%;
+      }
+      &_tech{
+        width: 100%;
+      }
+    }
+  /*#endregion */
+}
+@media #{$large-down}{
+    .intro{
+        left: 30%;
+    }
+  /*#region technologies large-down*/
+    .show{
+      &-1{
+        left: 10rem;
+      }
+      &-2{
+        right: 10rem;
+      }
+      &-7{
+        left: 10rem;
+      }
+      &-8{
+        right: 10rem;
+      }
+    }
+  /*#endregion */
+    .la_notule{
+      &_tech{
+        ul{
+          width: 80%;
+        }
+      }
+    }
+}
 /*#endregion */
 </style>
