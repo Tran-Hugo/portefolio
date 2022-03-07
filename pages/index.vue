@@ -734,6 +734,12 @@ section{
   }
 }
 @media #{$medium-down} {
+  .intro{
+    left: 18%;
+  }
+  .wrapper h1{
+    font-size: 2.5rem;
+  }
   .img_responsive{
     display: none;
   }
@@ -768,5 +774,6 @@ section{
     }
   }
 }
+
 /*#endregion */
 </style>

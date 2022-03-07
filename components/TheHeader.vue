@@ -1,7 +1,7 @@
 <template>
   <header>
       <h1>Hugo</h1>
-      <nav>
+      <nav class="navbar_links" :class="{open: isOpen}">
           <ul>
               <a href="#home"><li class="links li_home active">Accueil</li></a>
               <a href="#about"><li class="links li_about">À propos</li></a>
@@ -9,21 +9,25 @@
               <a href="#projets"><li class="links li_projets">Projets</li></a>
           </ul>
       </nav>
+      <div class="toggle-button" @click="isOpen = !isOpen">
+          <i v-if="!isOpen" class="fa-solid fa-bars"></i>
+          <i v-else class="fas fa-times"></i>
+      </div>
   </header>
 </template>
 
 <script>
 export default {
-    mounted(){
-
+    data(){
+        return{
+            isOpen: false,
+        }
     },
-    methods:{
-        
-    }
 }
 </script>
 
 <style lang="scss">
+@import '~/assets/scss/_responsive.scss';
 header{
     display: flex;
     justify-content: space-evenly;
@@ -85,10 +89,49 @@ ul a{
         color:white;
     }
 }
+.toggle-button{
+      display: none;
+      position: absolute;
+      top: .75rem;
+      right: 1rem;
+      font-size: 3.5rem;
+  }
 .active{
     font-weight: bold;
-    // transition: all 150ms ease-in-out
     transform: scale(1.1);
     transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media #{$small-up}{
+  header{
+    flex-direction: column;
+    max-height: unset;
+    background-color: #5555554f;
+    min-height: 8vh;
+  }
+  nav{
+    width: unset !important;
+    height: 0;
+    opacity: 0;
+    transition: all .5s ease;
+    visibility: hidden;
+    ul {
+        flex-direction: column;
+        height: fit-content !important;
+        width: 100%;
+        li{
+            padding: 1rem;
+        }
+    }
+  } 
+  .toggle-button{
+      display: flex;
+  }
+  .open{
+      height: fit-content;
+      opacity: 1;
+      visibility: visible;
+    
+  }
 }
 </style>
