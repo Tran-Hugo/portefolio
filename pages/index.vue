@@ -400,12 +400,12 @@ section{
   width: 2rem;
 }
 .présentation{
-  width: 33rem;
+  width: 70%;
   text-align: center;
   color: grey;
   &2{
     @extend .présentation;
-    width: 60rem;
+    width: 80%;
   }
 }
 .photo{
@@ -644,29 +644,129 @@ section{
     .intro{
         left: 30%;
     }
+    .présentation{
+        margin-bottom: 0;
+      &2{
+        margin-bottom: 0;
+      }
+    }
   /*#region technologies large-down*/
-    .show{
-      &-1{
+    .show-{
+      &1{
         left: 10rem;
       }
-      &-2{
+      &2{
         right: 10rem;
       }
-      &-7{
+      &7{
         left: 10rem;
       }
-      &-8{
+      &8{
         right: 10rem;
+      }
+      p{
+        font-size: 1.6rem;
       }
     }
   /*#endregion */
     .la_notule{
+      &_container{
+        width: 95%;
+      }
       &_tech{
+        h3{
+          font-size: 1.7rem;
+          white-space: nowrap;
+        }
         ul{
           width: 80%;
         }
+        ul{
+          li{
+            padding: 0.3rem .7rem;
+          }
+        }
       }
     }
+}
+@media #{$medium-up} {
+  .intro{
+    left: 23%;
+  }
+  .img_responsive{
+    height: 10rem;
+    width: 10rem;
+  }
+  .show-{
+    p{
+      font-size: 1.5rem;
+    }
+    &1{
+      left: 6rem;
+    }
+    &2{
+      right: 6rem;
+    }
+    &7{
+      left: 6rem;
+    }
+    &8{
+      right: 6rem;
+    }
+  }
+  .la_notule{
+    &_tech{
+      h3{
+        font-size: 1.5rem;
+      }
+      ul{
+          li{
+            padding: 0.3rem .3rem;
+          }
+        }
+    }
+    &_titles{
+      font-size: 1.5rem;
+    }
+    &_txt{
+      font-size: 1rem;
+    }
+  }
+}
+@media #{$medium-down} {
+  .img_responsive{
+    display: none;
+  }
+  .show-{
+    p{
+      font-size: 1.5rem;
+    }
+    &1{
+      position: unset;
+    }
+    &2{
+      position: unset;
+    }
+    &7{
+      position: unset;
+    }
+    &8{
+      position: unset;
+    }
+  }
+  .la_notule{
+    &_tech{
+      flex-direction: column;
+      ul{
+        width: 100%;
+        flex-wrap: wrap;
+        li{
+          padding: 0.3rem .5rem;
+          margin: .5rem;
+        }
+      }
+    }
+  }
 }
 /*#endregion */
 </style>
