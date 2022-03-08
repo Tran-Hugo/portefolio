@@ -1,6 +1,13 @@
 <template>
   <header>
-      <h1>Hugo</h1>
+      <div class="toggle_container">
+         <h1>Hugo</h1>
+      <div class="toggle-button" @click="isOpen = !isOpen">
+          <i v-if="!isOpen" class="fa-solid fa-bars"></i>
+          <i v-else class="fas fa-times"></i>
+      </div> 
+      </div>
+      
       <nav class="navbar_links" :class="{open: isOpen}">
           <ul>
               <a href="#home"><li class="links li_home active">Accueil</li></a>
@@ -9,10 +16,6 @@
               <a href="#projets"><li class="links li_projets">Projets</li></a>
           </ul>
       </nav>
-      <div class="toggle-button" @click="isOpen = !isOpen">
-          <i v-if="!isOpen" class="fa-solid fa-bars"></i>
-          <i v-else class="fas fa-times"></i>
-      </div>
   </header>
 </template>
 
@@ -89,13 +92,15 @@ ul a{
         color:white;
     }
 }
-.toggle-button{
-      display: none;
-      position: absolute;
-      top: .75rem;
-      right: 1rem;
-      font-size: 3.5rem;
-  }
+.toggle{
+    &-button{
+          display: none;
+        //   position: absolute;
+        //   top: .75rem;
+        //   right: 1rem;
+          font-size: 3.5rem;
+      }
+}
 .active{
     font-weight: bold;
     transform: scale(1.1);
@@ -106,7 +111,8 @@ ul a{
   header{
     flex-direction: column;
     max-height: unset;
-    background-color: #5555554f;
+    background-color: white;
+    color: black;
     min-height: 8vh;
     h1{
         margin:1rem 0 0 1rem;
@@ -127,14 +133,24 @@ ul a{
         }
     }
   } 
-  .toggle-button{
-      display: flex;
+  .toggle{
+      &-button{
+          display: flex;
+          margin-right: .5rem;
+      }
+      &_container{
+        display: flex;
+        justify-content: space-between;
+      }
   }
   .open{
       height: fit-content;
       opacity: 1;
       visibility: visible;
     
+  }
+  .scrolled{
+      animation: unset;
   }
 }
 </style>
