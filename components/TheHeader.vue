@@ -35,7 +35,7 @@ header{
     display: flex;
     justify-content: space-evenly;
     width:100%;
-    max-height: 8vh;
+    height: 8vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -147,7 +147,6 @@ ul a{
       height: fit-content;
       opacity: 1;
       visibility: visible;
-    
   }
   .scrolled{
       animation: unset;
