@@ -35,7 +35,7 @@ header{
     display: flex;
     justify-content: space-evenly;
     width:100%;
-    max-height: 8vh;
+    // max-height: 8vh;
     position: fixed;
     top: 0;
     left: 0;

@@ -16,9 +16,8 @@
               <a href="mailto:TranMSHugo@gmail.com"><i class="fa-solid fa-envelope"></i></a>
             </div>
             <a href="/CV.pdf" class="btn btn-5"><span>Télécharger CV</span></a>
-            <a href="#about" class="bottom_arrow_a"><button class="bottom_arrow">˅</button></a>
           </div>
-          
+          <a href="#about" class="bottom_arrow_a"><button class="bottom_arrow">˅</button></a>
         </section>
         <section id="about">
           <h2 class="haut_de_page">À propos de moi </h2>
@@ -257,7 +256,8 @@ section{
 .Home{
   height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   color: white;
   background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('~/assets/images/banner.jpg');
   background-size: cover;
@@ -265,8 +265,11 @@ section{
   background-attachment: fixed;
 }
 .intro{
-  position: relative;
-  left: 38%;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
     p{
       font-size: 1.5rem;
     }
@@ -356,22 +359,21 @@ section{
     border-radius: 1.5rem;
     color: white;
     &_a{
-      position: relative;
-      top: 20rem;
-      left: 3.5rem;
+      text-align: center;
       animation: bounce 1s ease infinite;
+      position: relative;
     }
 }
 
 @keyframes bounce {
   from{
-    top: 20rem;
+    bottom: .5rem;
   }
   50%{
-    top: 19.5rem;
+    bottom: 1rem;
   }
   to{
-    top: 20rem;
+    bottom: .5rem;
   }
 }
 /* #endregion */
@@ -606,9 +608,7 @@ section{
 }
 @media #{$large-up}{
   /*#region Home large-up*/
-    .intro{
-        left: 35%;
-    }
+    
   /*#endregion */
   /*#region about large-up*/
     .haut_de_page{
@@ -641,9 +641,7 @@ section{
   /*#endregion */
 }
 @media #{$large-down}{
-    .intro{
-        left: 30%;
-    }
+    
     .présentation{
         margin-bottom: 0;
       &2{
@@ -690,9 +688,7 @@ section{
     }
 }
 @media #{$medium-up} {
-  .intro{
-    left: 23%;
-  }
+  
   .img_responsive{
     height: 10rem;
     width: 10rem;
@@ -734,9 +730,7 @@ section{
   }
 }
 @media #{$medium-down} {
-  .intro{
-    left: 18%;
-  }
+  
   .wrapper h1{
     font-size: 2.5rem;
   }
