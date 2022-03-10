@@ -267,9 +267,10 @@ section{
 .intro{
     display: flex;
     flex-direction: column;
-    height: 90%;
+    height: 100%;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
     p{
       font-size: 1.5rem;
     }
@@ -420,6 +421,17 @@ section{
   object-position: top;
   @media screen and (max-height: 940px){
     margin-top: 0;
+  }
+  @media screen and (max-height: 880px){
+    width: 10rem;
+    height: 10rem;
+  }
+  @media screen and (max-height: 810px){
+    width: 8rem;
+    height: 8rem;
+  }
+  @media screen and (max-height: 770px){
+    display: none;
   }
 }
 /*#endregion */
@@ -766,6 +778,14 @@ section{
         }
       }
     }
+  }
+}
+@media #{$small-up}{
+  .haut_de_page{
+    font-size: 2rem;
+  }
+  .asterisque_container{
+    height: 2rem;
   }
 }
 
