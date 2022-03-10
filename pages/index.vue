@@ -39,7 +39,7 @@
           </div>
           <h1>Développeur</h1>
           <h3>Front-end · Back-end</h3>
-          <p class="présentation2">Au cours de cette formation, j'ai fais mes premiers pas en tant que développeur web et j'ai eu l'occasion d'étudier diverses technologies notamment des Frameworks Front-end et Back-end. Je souhaite évoluer en tant que développeur et monter en compétence.</p>
+          <p class="présentation2">Au cours de cette formation, j'ai fait mes premiers pas en tant que développeur web et j'ai eu l'occasion d'étudier diverses technologies notamment des Frameworks Front-end et Back-end. Je souhaite évoluer en tant que développeur et monter en compétence.</p>
           <div class="asterisque_container">
             <div class="barre"></div>
             <h2>*</h2>
@@ -116,7 +116,7 @@
             <h3 class="la_notule_titles">Front-end</h3>
             <p class="la_notule_txt">
               La partie Front-end du site a été réalisée avec Vue.js. C'est une Single Page Application, faite avec Vue Router, qui communique avec la partie Back-end via des requêtes HTTP
-              avec l'aide d'Axios. Les données sont gérées avec VueX.
+              à l'aide d'Axios. Les données sont gérées avec VueX.
             </p>
             <h3 class="la_notule_titles">Back-end</h3>
             <p class="la_notule_txt">
@@ -385,7 +385,7 @@ section{
   align-items: center;
 }
 .haut_de_page{
-  padding-top: 1rem;
+  padding-top: 2rem;
   font-size: 3rem;
 }
 .asterisque_container{
