@@ -120,7 +120,7 @@
             </p>
             <h3 class="la_notule_titles">Back-end</h3>
             <p class="la_notule_txt">
-              La partie Back-end du site a été réalisée avec Symfony et API platform. L'authentification se fait avec les Json Web Token. Les stocks de livre, les paniers des clients ainsi que leurs montants sont gérés par le Back-end.
+              La partie Back-end du site a été réalisée avec Symfony et API platform. L'authentification se fait avec les Json Web Token. Les stocks de livres, les paniers des clients, ainsi que leurs montants sont gérés par le Back-end.
               Les paiements en ligne sont réalisés avec Stripe Api.
             </p>
             <p class="text-center"><a href="https://la-notule.fr/">https://la-notule.fr/</a></p>
@@ -746,13 +746,21 @@ section{
   .wrapper h1{
     font-size: 2.5rem;
   }
+  .tech_container{
+    &_1{
+      width: 50%;
+    }
+    &_2{
+      width: 50%;
+    }
+  }
   .img_responsive{
     display: none;
   }
   .show-{
-    p{
-      font-size: 1.5rem;
-    }
+    // p{
+    //   font-size: 1.5rem;
+    // }
     &1{
       position: unset;
     }
@@ -786,6 +794,61 @@ section{
   }
   .asterisque_container{
     height: 2rem;
+  }
+  .show-{
+    p{
+      font-size: 1rem;
+    }
+    img{
+      height: 4.9rem;
+      width: 5.3rem;
+    }
+  }
+}
+@media #{$small-md}{
+  .wrapper{
+    h1{
+      font-size: 1.8rem;
+    }
+  }
+  .show-{
+    p{
+      font-size: 1rem;
+    }
+    img{
+      height: 4.9rem;
+      width: 5.3rem;
+    }
+  }
+}
+@media #{$small-md}{
+  .show-{
+    p{
+      font-size: .8rem;
+    }
+    img{
+      height: 4.9rem;
+      width: 5.3rem;
+    }
+  }
+}
+@media #{$small-down}{
+  .la_notule{
+    display: none;
+    &_link img{
+      height: 3rem;
+    }
+    &_tech{
+      ul{
+        font-size: .8rem;
+      }
+    }
+    &_titles{
+      font-size: 1rem;
+    }
+    &_txt{
+      font-size: .9rem;
+    }
   }
 }
 
