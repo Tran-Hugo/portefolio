@@ -430,9 +430,9 @@ section{
     width: 8rem;
     height: 8rem;
   }
-  @media screen and (max-height: 770px){
-    display: none;
-  }
+  // @media screen and (max-height: 770px){
+  //   display: none;
+  // }
 }
 /*#endregion */
 /*#region technologies*/
