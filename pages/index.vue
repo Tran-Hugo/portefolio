@@ -632,7 +632,7 @@ section{
   /*#endregion */
   /*#region technologies large-up*/
     .tech_container{
-      width: 100%;
+      width: 90%;
       &_1{
         width: 33%;
       }
