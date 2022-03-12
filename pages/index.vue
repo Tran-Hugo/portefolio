@@ -822,6 +822,12 @@ section{
   }
 }
 @media #{$small-md}{
+  main{
+    scroll-snap-type: unset;
+  }
+  section{
+    height: unset;
+  }
   .show-{
     p{
       font-size: .8rem;
@@ -830,6 +836,9 @@ section{
       height: 4.9rem;
       width: 5.3rem;
     }
+  }
+  .la_notule_band{
+    height: unset;
   }
 }
 @media #{$small-down}{
