@@ -619,9 +619,6 @@ section{
   }
 }
 @media #{$large-up}{
-  /*#region Home large-up*/
-    
-  /*#endregion */
   /*#region about large-up*/
     .haut_de_page{
       padding-top: 1rem;
@@ -806,27 +803,16 @@ section{
   }
 }
 @media #{$small-md}{
-  .wrapper{
-    h1{
-      font-size: 1.8rem;
-    }
-  }
-  .show-{
-    p{
-      font-size: 1rem;
-    }
-    img{
-      height: 4.9rem;
-      width: 5.3rem;
-    }
-  }
-}
-@media #{$small-md}{
   main{
     scroll-snap-type: unset;
   }
   section{
     height: unset;
+  }
+  .wrapper{
+    h1{
+      font-size: 1.8rem;
+    }
   }
   .show-{
     p{
