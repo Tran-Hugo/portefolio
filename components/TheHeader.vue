@@ -153,4 +153,14 @@ ul a{
       animation: unset;
   }
 }
+@media screen and (max-height: 430px){
+    header {
+        background-color: white;
+        color: black;
+        animation: unset;
+    }
+    .scrolled{
+        animation: unset;
+    }
+}
 </style>

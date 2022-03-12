@@ -851,6 +851,51 @@ section{
     }
   }
 }
+@media screen and (max-height: 430px){
+  main{
+    scroll-snap-type: unset;
+  }
+  section{
+    height: unset;
+  }
+  .intro{
+    margin-top: 5rem;
+    p{
+      font-size: 1.2rem;
+    }
+
+  }
+  .wrapper{
+    h1{
+      font-size: 2rem;
+    }
+  }
+  .reseaux a i {
+    font-size: 1.5rem;
+  }
+  .btn{
+    font-size: .8rem;
+    line-height: 2.5rem;
+    margin: 0.8rem 0 0 0;
+  }
+  .bottom_arrow{
+    height: 3.5rem;
+  }
+  @keyframes bounce {
+  from{
+    bottom: .2rem;
+  }
+  50%{
+    bottom: .8rem;
+  }
+  to{
+    bottom: .2rem;
+  }
+  }
+  .la_notule_band{
+    height: 12vh;
+  }
+}
 
 /*#endregion */
 </style>
