@@ -296,7 +296,7 @@ section{
 }
 .typing{
   position: relative;
-  margin-left: 1rem;
+  margin-left: .5rem;
   font-weight: bold;
 
   &::after{

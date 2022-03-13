@@ -12,7 +12,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script:[{src:'https://kit.fontawesome.com/b1e3173fbf.js', crossorigin:'anonymous'}]
+    script:[{src:'https://kit.fontawesome.com/62c7e07b3f.js', crossorigin:'anonymous'}]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
