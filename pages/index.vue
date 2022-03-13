@@ -11,9 +11,9 @@
             </div>
             <div class="reseaux">
               <a href="https://github.com/Tran-Hugo"><i class="fa-brands fa-github"></i></a>
-              <a href="tel:0659864590"><i class="fa-solid fa-circle-phone"></i></a>
               <a href="https://www.linkedin.com/in/hugo-tran-202569233/"><i class="fa-brands fa-linkedin"></i></a>
               <a href="mailto:TranMSHugo@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+              <a href="tel:0659864590"><i class="fa-solid fa-square-phone"></i></a>
             </div>
             <a href="/CV.pdf" class="btn btn-5"><span>Télécharger CV</span></a>
           </div>
