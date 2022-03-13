@@ -97,7 +97,7 @@
         <section id="projets">
           <div class="la_notule">
             <div class="la_notule_band">
-              <p>Site e-commerce pour une librairie fictive "La Notule"</p>
+              <p class="text-center">Site e-commerce pour une librairie fictive "La Notule"</p>
             </div>
           </div>
           <a href="https://la-notule.fr/" class="la_notule_link" title="Se rendre sur le site"><img src="@/assets/images/logo_la_notule.svg" alt="logo_la_notule.svg"></a>
@@ -801,6 +801,9 @@ section{
       width: 5.3rem;
     }
   }
+  .la_notule{
+  background-image:url("@/assets/images/la_notule_mobile.png");
+  }
 }
 @media #{$small-md}{
   main{
@@ -829,7 +832,7 @@ section{
 }
 @media #{$small-down}{
   .la_notule{
-    display: none;
+    // display: none;
     &_link img{
       height: 3rem;
     }
