@@ -26,7 +26,7 @@
             <h2>*</h2>
             <div class="barre"></div>
           </div>
-          <p class="présentation">Basé en région parisienne, je viens tout juste le titre RNCP de niveau 5
+          <p class="présentation">Basé en région parisienne, je viens tout juste d'obtenir le titre RNCP de niveau 5
             Développeur Web et Web Mobile au centre
             de formation de l'Afpa à Créteil et je
             recherche activement un poste en
