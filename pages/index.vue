@@ -366,6 +366,9 @@ section{
     justify-content: center;
     align-items: center;
     margin: auto;
+    &:hover{
+      color: unset;
+    }
 }
 
 @keyframes bounce {
