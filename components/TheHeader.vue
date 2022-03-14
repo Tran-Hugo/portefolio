@@ -115,6 +115,7 @@ ul a {
     background-color: white;
     color: black;
     min-height: 8vh;
+    animation: unset;
     h1 {
       margin: 1rem 0 0 1rem;
     }
