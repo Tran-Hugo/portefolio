@@ -6,7 +6,6 @@ export default {
   head: {
     title: 'Hugo Tran',
     meta: [
-      { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Je suis Hugo Tran, développeur web et voici mon portefolio' },
       { name: 'format-detection', content: 'telephone=no' },
