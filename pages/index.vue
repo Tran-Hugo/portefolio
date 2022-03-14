@@ -7,7 +7,7 @@
             <p class="show home_mark">Bonjour & Bienvenue</p>
             <div class="wrapper">
               <h1>Je suis </h1>
-              <h1 class="typing"><strong></strong></h1>
+              <h1 class="typing"><strong> </strong></h1>
             </div>
             <div class="reseaux">
               <a href="https://github.com/Tran-Hugo"><i class="fa-brands fa-github"></i></a>
