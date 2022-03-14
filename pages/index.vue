@@ -7,7 +7,7 @@
             <p class="show home_mark">Bonjour & Bienvenue</p>
             <div class="wrapper">
               <h1>Je suis </h1>
-              <h1 class="typing"><strong> </strong></h1>
+              <h1 class="typing"><strong></strong></h1>
             </div>
             <div class="reseaux">
               <a href="https://github.com/Tran-Hugo"><i class="fa-brands fa-github"></i></a>
@@ -26,8 +26,8 @@
             <h2>*</h2>
             <div class="barre"></div>
           </div>
-          <p class="présentation">Basé en région parisienne, je sors tout juste de la formation de
-            développeur web et web mobile au centre
+          <p class="présentation">Basé en région parisienne, je viens tout juste le titre RNCP de niveau 5
+            Développeur Web et Web Mobile au centre
             de formation de l'Afpa à Créteil et je
             recherche activement un poste en
             alternance.
