@@ -187,7 +187,7 @@ export default {
             let current = "";
             sec.forEach(section=>{
               const sectionTop = section.offsetTop;
-              if(document.getElementById("main").scrollTop>sectionTop-100){
+              if(document.getElementById("main").scrollTop>sectionTop-500){
                 current = section.getAttribute('id');
               }
             })
