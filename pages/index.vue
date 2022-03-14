@@ -17,7 +17,7 @@
             </div>
             <a href="/CV.pdf" class="btn btn-5"><span>Télécharger CV</span></a>
           </div>
-          <button class="bottom_arrow"><a href="#about" class="bottom_arrow_a">˅</a></button>
+          <a href="#about" class="bottom_arrow">˅</a>
         </section>
         <section id="about">
           <h2 class="haut_de_page">À propos de moi </h2>
@@ -358,13 +358,14 @@ section{
     height: 4rem;
     border: 1px solid rgba(255,255,255,0.5);
     border-radius: 1.5rem;
-    margin: auto;
     position: relative;
     animation: bounce 1s ease infinite;
-    &_a{
-      color: white;
-      text-decoration: none;
-    }
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 @keyframes bounce {
