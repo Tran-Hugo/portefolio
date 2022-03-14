@@ -10,10 +10,10 @@
       
       <nav class="navbar_links" :class="{open: isOpen}">
           <ul>
-              <a href="#home"><li class="links li_home active">Accueil</li></a>
-              <a href="#about"><li class="links li_about">À propos</li></a>
-              <a href="#technologies"><li class="links li_technologies">Technologies</li></a>
-              <a href="#projets"><li class="links li_projets">Projets</li></a>
+              <li class="links li_home active"><a href="#home">Accueil</a></li>
+              <li class="links li_about"><a href="#about">À propos</a></li>
+              <li class="links li_technologies"><a href="#technologies">Technologies</a></li>
+              <li class="links li_projets"><a href="#projets">Projets</a></li>
           </ul>
       </nav>
   </header>

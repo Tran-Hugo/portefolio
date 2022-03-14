@@ -17,7 +17,7 @@
             </div>
             <a href="/CV.pdf" class="btn btn-5"><span>Télécharger CV</span></a>
           </div>
-          <a href="#about" class="bottom_arrow_a"><button class="bottom_arrow">˅</button></a>
+          <button class="bottom_arrow"><a href="#about" class="bottom_arrow_a">˅</a></button>
         </section>
         <section id="about">
           <h2 class="haut_de_page">À propos de moi </h2>
@@ -37,7 +37,7 @@
             <h2>*</h2>
             <div class="barre"></div>
           </div>
-          <h1>Développeur</h1>
+          <h2>Développeur</h2>
           <h3>Front-end · Back-end</h3>
           <p class="présentation2">Au cours de cette formation, j'ai fait mes premiers pas en tant que développeur web et j'ai eu l'occasion d'étudier diverses technologies notamment des Frameworks Front-end et Back-end. Je souhaite évoluer en tant que développeur et monter en compétence.</p>
           <div class="asterisque_container">
@@ -358,11 +358,12 @@ section{
     height: 4rem;
     border: 1px solid rgba(255,255,255,0.5);
     border-radius: 1.5rem;
-    color: white;
+    margin: auto;
+    position: relative;
+    animation: bounce 1s ease infinite;
     &_a{
-      text-align: center;
-      animation: bounce 1s ease infinite;
-      position: relative;
+      color: white;
+      text-decoration: none;
     }
 }
 
