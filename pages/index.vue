@@ -48,7 +48,7 @@
         <h3>Front-end · Back-end</h3>
         <p class="présentation2">
           Au cours de cette formation, j'ai fait mes premiers pas en tant que
-          développeur web et j'ai eu l'occasion d'étudier diverses technologies
+          développeur web et j'ai eu l'occasion d'étudier diverses technologies,
           notamment des Frameworks Front-end et Back-end. Je souhaite évoluer en
           tant que développeur et monter en compétence.
         </p>
@@ -561,6 +561,7 @@ section {
   p {
     font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 0;
   }
   img {
     height: 6.9rem;
