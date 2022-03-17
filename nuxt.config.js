@@ -7,7 +7,7 @@ export default {
     title: 'Hugo Tran | Développeur web',
     meta: [
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Je suis Hugo Tran, développeur web et voici mon portefolio. Basé en région parisienne, je viens tout juste d\'obtenir le titre RNCP de niveau 5 Développeur Web et Web Mobile au centre de formation de l\'Afpa à Créteil et je recherche activement un poste en alternance.' },
+      { hid: 'description', name: 'description', content: 'Je suis Hugo Tran, développeur web full stack et voici mon portefolio. Basé en région parisienne, je viens tout juste d\'obtenir le titre RNCP de niveau 5 Développeur Web et Web Mobile au centre de formation de l\'Afpa à Créteil et je recherche activement un poste en alternance.' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, { rel:'canonical', href:'https://hugo-tran.fr/'}],
