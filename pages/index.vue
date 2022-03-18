@@ -478,6 +478,7 @@ section {
     width: 8rem;
     height: 8rem;
   }
+  
 }
 /*#endregion */
 /*#region technologies*/
@@ -931,6 +932,37 @@ section {
     height: 12vh;
   }
 }
+@media screen and (max-height:710px) and (min-width:1024px) {
+  .haut_de_page{
+    padding-top: 2rem;
+  }
+  .asterisque_container{
+    height: 2rem;
+  }
+  .show- {
+    &1 {
+      left: 11rem;
+    }
+    &2 {
+      right: 11rem;
+    }
+    &7 {
+      left: 11rem;
+    }
+    &8 {
+      right: 11rem;
+    }
+  }
+  .la_notule{
+    background-attachment: unset;
+    background-position-y: unset;
+    &_link{
+      img{
+        width: 12rem;
+      }
+    }
+  }
+  }
 
 /*#endregion */
 </style>
