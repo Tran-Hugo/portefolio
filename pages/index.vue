@@ -19,7 +19,7 @@
             <a href="mailto:TranMSHugo@gmail.com"
               ><i class="fa-solid fa-envelope"></i
             ></a>
-            <a href="tel:0659864590"
+            <a href="tel:0659864590" title="06.59.86.45.90"
               ><i class="fa-solid fa-square-phone"></i
             ></a>
           </div>
